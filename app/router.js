@@ -12,6 +12,9 @@ router.get('/card/:id', mainController.cardPage);
 
 router.get('/search', searchController.searchPage);
 router.get('/search/element', searchController.searchByElement);
+router.get('/search/level', searchController.searchByLevel);
+router.get('/search/values', searchController.searchByValues);
+router.get('/search/name', searchController.searchByName);
 
 router.get('/deck', deckBuilderController.deckPage);
 router.get('/deck/add/:id', deckBuilderController.addToDeck);
