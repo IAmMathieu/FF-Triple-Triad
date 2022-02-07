@@ -16,6 +16,21 @@ const dataMapper = {
     const result = await database.query(query)
     return result.rows[0]
   },
+  queryByElement: async (element) => {
+    let query = {}
+    if (element === 'null') {
+      query = {
+        text: 'SELECT * FROM card WHERE card.element IS NULL',
+      }
+    } else {
+      query = {
+        text: `SELECT * FROM card WHERE card.element = $1`,
+        values: [element]
+      }
+    }
+    const results = await database.query(query)
+    return results.rows
+  },
   
 };
 
