@@ -32,6 +32,12 @@ const deckBuilderController = {
             res.redirect('/deck');
         }
     },
+    removeFromDeck: (req, res) => {
+        deckCheck(req);
+        const cardId = Number(req.params.id);
+        req.session.deck = req.session.deck.filter( (id) => id !== cardId);
+        res.redirect('/deck');
+    }
 };
 
 module.exports = deckBuilderController;
