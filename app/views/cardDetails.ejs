@@ -1,0 +1,23 @@
+<%- include('header') %>
+
+<h1><%= title %></h1>
+
+<div class="cardContainer">
+    <h2 class="card_name"><em class="cardEm"><%= card.name %></em></h2>
+    <img class="card_image" src="/visuals/<%= card.visual_name %>" alt="<%= card.name %> illustration">
+    <div class="description">
+        <% if(card.element) { %>
+            <p>Élément de la carte: <em class="cardEm"><%= card.element %></em></p>
+        <% } else { %>
+            <p>Élément de la carte: <em class="cardEm">Aucun</em></p>
+        <% } %>
+        <p>Niveau de la carte: <em class="cardEm"><%= card.level %></em></p>
+        <p>Valeur de la carte au Nord: <em class="cardEm"><%= card.value_north %></em></p>
+        <p>Niveau de la carte à l'est: <em class="cardEm"><%= card.value_east %></em></p>
+        <p>Niveau de la carte au sud: <em class="cardEm"><%= card.value_south %></em></p>
+        <p>Niveau de la carte à l'ouest: <em class="cardEm"><%= card.value_west  %></em></p>
+    </div>
+</div>
+<em></em>
+
+<%- include('footer') %>

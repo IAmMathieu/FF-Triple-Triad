@@ -1,4 +1,3 @@
-
 .header {
   background-color: purple;
   display: flex;
@@ -74,6 +73,31 @@
   text-decoration: none;
 }
 
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.card_name {
+  font-size: 2rem;
+}
+
+.card_image {
+  margin: 20px;
+  width: 200px;
+  height: auto;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardEm {
+  font-weight: bold;
+}
 
 .footer {
   text-align: center;
